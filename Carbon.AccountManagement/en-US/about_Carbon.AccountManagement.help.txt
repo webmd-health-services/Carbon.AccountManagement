@@ -1,0 +1,8 @@
+TOPIC
+    about_Carbon.AccountManagement
+
+SHORT DESCRIPTION
+    Carbon.AccountManagement is a PowerShell module for...
+
+LONG DESCRIPTION
+    The Carbon.AccountManagement PowerShell module...
