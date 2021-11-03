@@ -18,7 +18,7 @@
     RootModule = 'Carbon.AccountManagement.psm1'
 
     # Version number of this module.
-    ModuleVersion = '0.0.0'
+    ModuleVersion = '1.0.0'
 
     # ID used to uniquely identify this module
     GUID = ''
@@ -76,6 +76,10 @@
 
     # Functions to export from this module. Only list public function here.
     FunctionsToExport = @(
+        'ConvertTo-SecurityIdentifier',
+        'Resolve-Identity',
+        'Resolve-IdentityName',
+        'Test-Identity'
     )
 
     # Cmdlets to export from this module. By default, you get a script module, so there are no cmdlets.
@@ -126,5 +130,5 @@
     # HelpInfoURI = ''
 
     # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
-    # DefaultCommandPrefix = ''
+    DefaultCommandPrefix = 'C'
 }
