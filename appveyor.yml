@@ -8,8 +8,6 @@ image:
 - Visual Studio 2015
 - Visual Studio 2017
 - Visual Studio 2019
-- Ubuntu
-- macOS
 
 build:
   verbosity: minimal
@@ -25,12 +23,6 @@ for:
   build_script:
   - ps: .\build.ps1
   - pwsh: .\build.ps1
-
-- matrix:
-    only:
-      - image: Ubuntu
-  environment:
-    LANG: us_US.UTF-8
 
 - matrix:
     only:

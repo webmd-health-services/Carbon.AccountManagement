@@ -1,9 +1,10 @@
 # Overview
 
-The "Carbon.AccountManagement" module...
+The "Carbon.AccountManagement" module contains functions to help find and resolve Windows NT identities.
 
 # System Requirements
 
+* Windows OS (Linux & MacOS not supported)
 * Windows PowerShell 5.1 and .NET 4.6.1+
 * PowerShell Core 6+
 
