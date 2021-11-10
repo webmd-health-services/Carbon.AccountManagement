@@ -8,6 +8,12 @@ image:
 - Visual Studio 2015
 - Visual Studio 2017
 - Visual Studio 2019
+- Ubuntu # Ubuntu and Ubuntu1804 are the same
+- Ubuntu2004
+- Ubuntu1604
+- macOS
+- macOS-BigSur
+- macOS-Mojave
 
 build:
   verbosity: minimal
@@ -23,6 +29,15 @@ for:
   build_script:
   - ps: .\build.ps1
   - pwsh: .\build.ps1
+
+- matrix:
+    only:
+      - image: Ubuntu
+      - image: Ubuntu2004
+      - image: Ubuntu1804
+      - image: Ubuntu1604
+  environment:
+    LANG: us_US.UTF-8
 
 - matrix:
     only:
