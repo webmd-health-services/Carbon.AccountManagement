@@ -93,10 +93,24 @@ else
             }
         }
     }
-    Describe 'ConvertTo-SecurityIdentifier.when passing in an SID as a byte array on a non-Windows platform.' {
+    Describe 'ConvertTo-SecurityIdentifier.when passing in an SID as a byte array on a non-Windows platform.' { 
+        It 'should not convert the passed in SID and throw an error. '{
             $SID = 'S-1-2-34567890-1234567890'
             $encoding = [Text.Encoding]::Unicode
             $byteSID = $encoding.GetBytes($SID)
-            { ConvertTo-CSecurityIdentifier -SID $SID } | Should -Throw 'Error'
+            $thrownError = $false
+            {
+                try
+                {
+                    ConvertTo-CSecurityIdentifier -SID $byteSID -ErrorAction Stop
+                }
+                catch
+                {
+                    $thrownError = $true
+                }
+                $thrownError | SHould -Be $true
+            }
+        }
     }
 }
+

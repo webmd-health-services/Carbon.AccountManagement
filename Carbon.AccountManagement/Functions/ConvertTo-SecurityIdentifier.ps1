@@ -43,7 +43,6 @@ function ConvertTo-SecurityIdentifier
         [Parameter(Mandatory)]
         [Object] $SID
     )
-
     Use-CallerPreference -Cmdlet $PSCmdlet -Session $ExecutionContext.SessionState
     
     try
