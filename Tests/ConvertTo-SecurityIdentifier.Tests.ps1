@@ -108,7 +108,7 @@ else
                 {
                     $thrownError = $true
                 }
-                $thrownError | SHould -Be $true
+                $thrownError | Should -Be $true
             }
         }
     }
