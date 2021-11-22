@@ -136,7 +136,7 @@ if( -not (Test-Path -Path $configPath -PathType 'Leaf') )
     @'
 Build:
 - Version:
-    Version: 0.0.0
+    Version: 1.0.0
 
 Publish:
 
